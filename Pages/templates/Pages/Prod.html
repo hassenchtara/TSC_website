@@ -1,0 +1,60 @@
+{% extends "Pages/base.html" %}
+{% block content %}
+
+<!-- ======= Breadcrumbs ======= -->
+<section id="breadcrumbs" class="breadcrumbs">
+  <div class="container">
+
+    <div class="d-flex justify-content-between align-items-center">
+      <h2>{{ produit.name }}</h2>
+      <ol>
+        <li><a href="{% url 'Accueil' %}">Accueil</a></li>
+        <li><a href="{% url 'Produits' %}">Produits</a></li>
+        <li>{{ produit.name }}</li>
+      </ol>
+    </div>
+
+  </div>
+</section><!-- End Breadcrumbs -->
+
+
+<section id="portfolio-details" class="portfolio-details">
+  <div class="container">
+    <h2 class="portfolio-title">{{ produit.name }}</h2>
+    <div class="row">
+
+      <div class="col-lg-8" data-aos="fade-right">
+        <div class="owl-carousel portfolio-details-carousel">
+          <img src="/static{{ produit.photo_main.url }}" class="img-fluid" alt="">
+          {% if produit.photo_1 %} <img src="/static{{ produit.photo_1.url }}" class="img-fluid" alt=""> {% endif %}
+          {% if produit.photo_2 %} <img src="/static{{ produit.photo_2.url }}" class="img-fluid" alt=""> {% endif %}
+          {% if produit.photo_3 %} <img src="/static{{ produit.photo_3.url }}" class="img-fluid" alt=""> {% endif %}
+          {% if produit.photo_4 %} <img src="/static{{ produit.photo_4.url }}" class="img-fluid" alt=""> {% endif %}
+          {% if produit.photo_5 %} <img src="/static{{ produit.photo_5.url }}" class="img-fluid" alt=""> {% endif %}
+          {% if produit.photo_6 %} <img src="/static{{ produit.photo_6.url }}" class="img-fluid" alt=""> {% endif %}
+          {% if produit.photo_7 %} <img src="/static{{ produit.photo_7.url }}" class="img-fluid" alt=""> {% endif %}
+          {% if produit.photo_8 %} <img src="/static{{ produit.photo_8.url }}" class="img-fluid" alt=""> {% endif %}
+          {% if produit.photo_9 %} <img src="/static{{ produit.photo_9.url }}" class="img-fluid" alt=""> {% endif %}
+        </div>
+      </div>
+
+      <div class="col-lg-4 portfolio-info" data-aos="fade-left">
+        <h3>Description:</h3>
+        <ul>
+          {% for a,b in list %}
+          <li><strong>{{ a }}</strong>: {{ b }}</li>
+          {% endfor %}
+        </ul>
+        <br>
+        {% for q in description %}
+        <p>{{ q }}</p>
+        <br>
+        {% endfor %}
+      </div>
+
+    </div>
+
+  </div>
+</section><!-- End Portfolio Details Section -->
+
+{% endblock content %}

@@ -1,0 +1,91 @@
+{% extends "Pages/base.html" %}
+{% block content %}
+
+<!-- ======= Breadcrumbs ======= -->
+<section id="breadcrumbs" class="breadcrumbs">
+  <div class="container">
+
+    <div class="d-flex justify-content-between align-items-center">
+      <h2>Services</h2>
+      <ol>
+        <li><a href="{% url 'Accueil' %}">Accueil</a></li>
+        <li>Services</li>
+      </ol>
+    </div>
+  </div>
+</section><!-- End Breadcrumbs -->
+    <br><br>
+    <section id="features" class="features">
+      <div class="container">
+
+        <div class="section-title aos-init aos-animate" data-aos="fade-up">
+          <h2>Some <strong>Features</strong> we do provide</h2>
+          <p>Un outil industriel ne peut fonctionner correctement que si un travail en amont et en aval de suivi et de contrôle est fait. C’est pour cela que SIAM s’est entourée d’une équipe spécialisée et complémentaire afin d’assurer le bon fonctionnement de l’entreprise. Ingénieurs et techniciens sont à votre disposition de A jusqu’à Z pour garantir la réussite de votre projet.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 mb-5 mb-lg-0 aos-init aos-animate" data-aos="fade-right">
+            <ul class="nav nav-tabs flex-column">
+              <li class="nav-item">
+                <a class="nav-link active show" data-toggle="tab" href="#tab-1">
+                  <h4>AUTOMATISME</h4>
+                  <p>  Étude et conseil pour l’automatisation des chaînes et des postes de travail.
+  Notre mission consiste à intervenir sur des systèmes opérants en mode manuelle en proposant et exécutant des solutions et des techniques d’automatisation dans le cadre d’augmenter la productivité et la rentabilité tout en maîtrisant le coût d’investissement.
+  Robotisation</p>
+                </a>
+              </li>
+              <li class="nav-item mt-2">
+                <a class="nav-link" data-toggle="tab" href="#tab-2">
+                  <h4>Conception et Prototypage</h4>
+                  <p>Dédié d’une équipe des consultants et des experts, la société TSC vous accompagne à la réalisation et la concrétisation de vos idées de systèmes en offrant des rendues 3D et des simulations graphiques et animées.
+  Pour les pièces coûteuses, nous proposons des prototypes en impression 3D afin de vérifier la conformité de leurs fonctionnements et réduire le coût de prototypage réel.
+  Pour les pièces de rechange nous proposition une adaptation identique à l’original tout en proposons des améliorations.</p>
+                </a>
+              </li>
+              <li class="nav-item mt-2">
+                <a class="nav-link" data-toggle="tab" href="#tab-3">
+                  <h4>Etude, Assistance et Conseil</h4>
+                  <p>Installation, réparation, maintenance, rénovation des équipements de production
+Mise en route, exploitation et maintenance d’installations techniques et industrielles
+Conseil et assistance en aménagement industriel et smart building</p>
+                </a>
+              </li>
+              <li class="nav-item mt-2">
+                <a class="nav-link" data-toggle="tab" href="#tab-4">
+                  <h4>Ventes d’équipements</h4>
+                  <p>Ventes des équipements et systèmes industriels
+  Ventes des équipements et accessoires des bâtiments intelligents </p>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-7 ml-auto aos-init" data-aos="fade-left" data-aos-delay="100">
+            <div class="tab-content">
+              <div class="tab-pane active show" id="tab-1">
+                <figure>
+                  <img src="/static/images/about.jpg" alt="" class="img-fluid">
+                </figure>
+              </div>
+              <div class="tab-pane" id="tab-2">
+                <figure>
+                  <img src="/static/images/about.jpg" alt="" class="img-fluid">
+                </figure>
+              </div>
+              <div class="tab-pane" id="tab-3">
+                <figure>
+                  <img src="/static/images/about.jpg" alt="" class="img-fluid">
+                </figure>
+              </div>
+              <div class="tab-pane" id="tab-4">
+                <figure>
+                  <img src="/static/images/about.jpg" alt="" class="img-fluid">
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+{% endblock content %}
